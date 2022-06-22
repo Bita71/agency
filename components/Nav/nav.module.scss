@@ -1,0 +1,28 @@
+@import './styles/utils/utils';
+
+.list {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1040px) {
+    display: none;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-right: 130px;
+
+    @media (max-width: 1300px) {
+      margin-right: 60px;
+    }
+  }
+}
+
+.link {
+  color: $colorFontLight;
+  @include transition(opacity);
+  @include hover();
+  @include active();
+  @include focus();
+}

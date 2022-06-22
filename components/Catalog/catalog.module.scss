@@ -1,0 +1,27 @@
+@import './styles/utils/utils';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 85px;
+  padding-bottom: 185px;
+
+  @media (max-width: 1040px) {
+    padding-top: 32px;
+    padding-bottom: 224px;
+  }
+}
+
+.button {
+  border-radius: 6px;
+  padding-left: 43px;
+  padding-right: 43px;
+  color: $colorFontDark;
+  background-color: $white;
+
+  @include transition(opacity);
+  @include hover();
+  @include active();
+  @include focus();
+}

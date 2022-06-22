@@ -1,0 +1,13 @@
+@import './styles/utils/utils';
+
+.button {
+  padding: 18px 36px;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+
+  @include transition(opacity);
+  @include hover();
+  @include active();
+  @include focus();
+}

@@ -1,0 +1,45 @@
+@import "./styles/utils/utils";
+
+.list,
+.select {
+  margin-bottom: 75px;
+}
+
+.list {
+  display: flex;
+
+  @media (max-width: 1040px) {
+    display: none;
+  }
+}
+
+.select {
+  display: none;
+  width: 100%;
+  margin-bottom: 48px;
+
+  @media (max-width: 1040px) {
+    display: block;
+  }
+}
+
+.item:not(:last-child) {
+  margin-right: 63px;
+}
+
+.button {
+  color: $colorFontCategoryItem;
+
+  @include transition(opacity);
+  @include hover();
+  @include active();
+  @include focus();
+
+  &:disabled {
+    opacity: 1;
+  }
+
+  &.active {
+    color: $colorActive;
+  }
+}
